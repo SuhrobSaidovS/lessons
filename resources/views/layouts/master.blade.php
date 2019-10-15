@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +12,7 @@
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
     <!-- Navbar -->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -87,16 +86,16 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item ">
-                        <a href="#" class="nav-link active">
+                        <router-link to="/dashboard" class="nav-link ">
                             <i class=" fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
                                 {{--<i class="right fas fa-angle-left"></i>--}}
                             </p>
-                        </a>
+                        </router-link>
 
                     <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link ">
                             <i class="nav-icon fas fa-cog"></i>
                             <p>
                                Management
@@ -105,7 +104,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="./index.html" class="nav-link active">
+                                <a href="./index.html" class="nav-link ">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Dashboard v1</p>
                                 </a>
@@ -128,17 +127,17 @@
 
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link active">
+                        <router-link to="/profile" class="nav-link">
                             <i class=" fas fa-user"></i>
                             <p>
                                 Profile
                                 {{--<i class="right fas fa-angle-left"></i>--}}
                             </p>
-                        </a>
+                        </router-link>
 
                     </li>
                     <li class="nav-item ">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link ">
                             <i class="fa fa-cogs"></i>
                             <p>
                                 Settings
