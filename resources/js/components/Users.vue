@@ -7,7 +7,7 @@
                         <h3 class="card-title">Users table</h3>
 
                         <div class="card-tools">
-                            <button class="btn btn-success" data-toggle="modal" data-target="#addNew">Add New User<i class="fas fa-user-plus fa-fw"></i> </button>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#addNew">Add New<i class="fas fa-user-plus fa-fw"></i> </button>
                             <div class="input-group input-group-sm" style="width: 150px;">
 
                                 <div class="input-group-append">
@@ -67,6 +67,7 @@
                         </button>
                     </div>
                     <!-- Modal body-->
+                    <form @submit.prevent="createUser">
                     <div class="modal-body">
                             <div class="form-group">
                             <input v-model="form.name" type="text" name="name"
@@ -110,6 +111,7 @@
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary">Create</button>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -129,6 +131,11 @@
                         photo:''
                     })
             }
+        },
+        methods:{
+         createUser(){
+             this.form.post('api/user')
+         }
         },
         mounted() {
             console.log('Component mounted.')
